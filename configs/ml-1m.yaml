@@ -1,0 +1,65 @@
+[standard]
+dataset: 'ml-1m'
+num_epoch: 500
+optimizer: 'adam'
+adam_lr: 1e-4
+latent_dim_mf: 4
+latent_dim_mlp: 4
+layers: [8, 8, 4]
+l2_regularization: 0.000001
+top_k: 10
+alias: 'neucf_factor4_layers8_8_4_neg100_u10_s'
+is_payload: False
+data_dir: 'data/processed_data/ml-1m/ml_1m_dataset_neg10_processed_'
+model_dir: 'trained_models/ml-1m/checkpoints/{}{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'
+results_dir: 'results/ml-1m/{}{}_metrics.pkl'
+logs_dir: 'logs/ml-1m/{}{}_metrics.txt'
+use_cuda: False
+pretrain: False
+num_users: None
+num_items: None
+seed: None
+[federated]
+dataset: 'ml-1m'
+num_epoch: 500
+optimizer: 'adam'
+adam_lr: 3e-3
+latent_dim_mf: 4
+latent_dim_mlp: 4
+layers: [8, 8, 4]
+l2_regularization: 0.000001
+top_k: 10
+alias: 'fed_neucf_factor4_layers8_8_4_neg100_u10_s'
+is_payload: False
+data_dir: 'data/processed_data/ml-1m/ml_1m_dataset_neg10_processed_'
+model_dir: 'trained_models/ml-1m/checkpoints/{}{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'
+results_dir: 'results/ml-1m/{}{}_metrics.pkl'
+logs_dir: 'logs/ml-1m/{}{}_metrics.txt'
+use_cuda: False
+pretrain: False
+num_users: None
+num_items: None
+seed: None
+[payload]
+dataset: 'ml-1m'
+num_epoch: 500
+optimizer: 'adam'
+adam_lr: 3e-2
+latent_dim_mf: 4
+latent_dim_mlp: 4
+layers: [8, 8, 4]
+l2_regularization: 0.000001
+top_k: 10
+alias: 'payload_fed_neucf_factor4_layers8_8_4_neg100_u10_s'
+is_payload: True
+data_dir: 'data/processed_data/ml-1m/ml_1m_dataset_neg10_processed_'
+model_dir: 'trained_models/ml-1m/checkpoints/{}{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'
+results_dir: 'results/ml-1m/{}{}_metrics.pkl'
+logs_dir: 'logs/ml-1m/{}{}_metrics.txt'
+use_cuda: False
+pretrain: False
+num_users: None
+num_items: None
+seed: None
+train_user_ratio: 0.1
+alpha: 0.999
