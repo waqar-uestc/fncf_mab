@@ -1,4 +1,4 @@
-### Communication-Efficient Federated Neural Collaborative Filtering with Multi-Armed Bandits
+### Communication-Efficient Federated Neural Collaborative Filtering
 ___
 This repository contains the code, dataset, and related guidelines for the practical implementation of our work **Communication-Efficient Federated Neural Collaborative Filtering with Multi-Armed Bandits**. 
 
@@ -19,3 +19,5 @@ For bandit based communication-efficient neural collaborative filtering run:
 ```bash
 python fncf_mab_ml1m.py 
 ```
+## Support
+If you have any questions, feel free to contact us for assistance ! 
