@@ -10,6 +10,11 @@ We implement the proposed solution with PyTorch. The architecture of the neural 
 ___
 
 ## Usage
+First, You need to install the required dependencies:  
+```
+pip install -r requirements.txt 
+```
+
 
 For simple neural collaborative filtering run: 
 ```bash
